@@ -32,5 +32,5 @@ let user2 = {
 
 user2.name = 'harin';
 console.log(user2.name);
-//user2.name = 'ha';    // throw err
+//user2.name = 'ha';    // throw error
 user2.name = 'har';
