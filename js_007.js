@@ -6,16 +6,16 @@ console.log(str);
 // i : perform case-insensitive matching
 
 var n = str.search(/university/i);
-console.log(n);
+console.log(n); // 7
 
 // g : perform a global-match
 var n = str.search(/university/g);
-console.log(n);
+console.log(n); // -1
 var n = str.search(/niversity/g);
-console.log(n);
+console.log(n); // 8
 
 var tmpstr = str.replace("University", "College");
-console.log(tmpstr);
+console.log(tmpstr);    // Sejong College!
 
 // match
 
@@ -26,6 +26,7 @@ const ignoreAllCaseRegex = /to/gi;
 const findRangeRegex = /([a-f])\w+/i;
 const findAllRangeRegex = /([a-f])\w+/gi;
 
+// 이부분 이해 잘 못함
 console.log(str.match(sensitiveCaseRegex));
 console.log(str.match(ignoreAllCaseRegex));
 console.log(str.match(findRangeRegex));
@@ -37,5 +38,5 @@ const emailRegExp = /^([-_.]?[0-9a-zA-z]{6,13})+\@([0-9a-z]+)\.([a-z]{2,3})$/i;
 
 // ([-_.]?[0-9a-zA-z]{6,13})+ : 영문 대소자, 숫자, - _ . 를 허용하는 표현식
 
-console.log(emailRegExp.test('test123@javascript.org'));
-console.log(emailRegExp.test('test123@javascript'));
+console.log(emailRegExp.test('test123@javascript.org'));    // true
+console.log(emailRegExp.test('test123@javascript'));        // false
